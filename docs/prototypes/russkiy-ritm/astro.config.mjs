@@ -9,5 +9,8 @@ export default defineConfig({
   base,
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      tsconfigPaths: [],
+    },
   },
 });
