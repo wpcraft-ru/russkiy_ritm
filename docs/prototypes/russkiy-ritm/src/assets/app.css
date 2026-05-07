@@ -34,3 +34,8 @@
   outline: 2px solid oklch(55% 0.22 25);
   outline-offset: 2px;
 }
+
+/* Gallery: skeleton loader + fade-in */
+.gallery-img {
+  transition: opacity 0.6s ease;
+}
