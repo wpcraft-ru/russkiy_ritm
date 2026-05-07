@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install
+      - run: npm install --no-package-lock
         working-directory: docs/prototypes/russkiy-ritm
       - run: npm run build
         working-directory: docs/prototypes/russkiy-ritm
