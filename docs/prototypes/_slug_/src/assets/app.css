@@ -1,0 +1,36 @@
+@import url("{{FONT_URL}}");
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "{{FONT_FAMILY}}", sans-serif;
+  --font-sans: "{{FONT_FAMILY}}", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@plugin "daisyui";
+
+/* Design system: {{PROJECT_NAME}} — dark base with accent colors */
+:root {
+  /* primary: accent color */
+  --color-primary: {{PRIMARY_OKLCH}};
+  --color-primary-content: oklch(100% 0 0);
+  /* base-100: dark background */
+  --color-base-100: {{BG_DARK_OKLCH}};
+  /* base-200: surface for cards and alt sections */
+  --color-base-200: {{BG_SURFACE_OKLCH}};
+  /* base-300: slightly lighter dark */
+  --color-base-300: oklch(26% 0.02 38);
+  /* base-content: text on dark bg */
+  --color-base-content: {{TEXT_CONTENT_OKLCH}};
+  --radius-btn: 0;
+  --radius-box: 0;
+  --radius-badge: 0;
+  --radius-field: 0;
+}
+
+/* Focus visible: primary ring */
+*:focus-visible {
+  outline: 2px solid {{PRIMARY_OKLCH}};
+  outline-offset: 2px;
+}

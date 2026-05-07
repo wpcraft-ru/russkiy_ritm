@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@plugin "daisyui";
+
+/* Design system: Русский Ритм — dark base with passion red accent */
+:root {
+  /* primary: passion red */
+  --color-primary: oklch(55% 0.22 25);
+  --color-primary-content: oklch(100% 0 0);
+  /* base-100: dark background */
+  --color-base-100: oklch(15% 0.01 30);
+  /* base-200: surface for cards and alt sections */
+  --color-base-200: oklch(20% 0.015 35);
+  /* base-300: slightly lighter dark */
+  --color-base-300: oklch(26% 0.02 38);
+  /* base-content: text on dark bg */
+  --color-base-content: oklch(92% 0.01 70);
+  --radius-btn: 0;
+  --radius-box: 0;
+  --radius-badge: 0;
+  --radius-field: 0;
+}
+
+/* Focus visible: primary ring */
+*:focus-visible {
+  outline: 2px solid oklch(55% 0.22 25);
+  outline-offset: 2px;
+}
