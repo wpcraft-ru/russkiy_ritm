@@ -1,0 +1,8 @@
+{
+  "name": "russkiy-ritm",
+  "private": true,
+  "scripts": {
+    "dev": "cd docs/prototypes/russkiy-ritm && npm run dev",
+    "build": "cd docs/prototypes/russkiy-ritm && npm run build"
+  }
+}

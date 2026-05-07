@@ -24,17 +24,14 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-          cache-dependency-path: docs/prototypes/russkiy-ritm/package-lock.json
+          cache-dependency-path: docs/prototypes/package-lock.json
       - run: npm ci
-        working-directory: docs/prototypes/russkiy-ritm
+        working-directory: docs/prototypes
       - run: npm run build
-        working-directory: docs/prototypes/russkiy-ritm
-        env:
-          ASTRO_SITE: https://${{ github.repository_owner }}.github.io
-          ASTRO_BASE: /${{ github.event.repository.name }}
+        working-directory: docs/prototypes
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/prototypes/russkiy-ritm/dist
+          path: ./docs/prototypes/dist
 
   deploy:
     needs: build
