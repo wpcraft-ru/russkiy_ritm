@@ -389,32 +389,32 @@ import Layout from "../layouts/Layout.astro";
 						<p class="font-mono text-xs uppercase tracking-widest text-base-content/50 mb-2">Галерея</p>
 						<h2 class="font-display text-4xl leading-[1.1] md:text-5xl font-bold">Как проходят занятия</h2>
 						<p class="mt-3 max-w-2xl text-base-content/70">
-							Атмосфера, которую не передать словами — уютные залы, энергия танца и счастливые лица.
+							Атмосфера, которую не передать словами — уютные залы, энергия танца и счастливые лица. Нажмите на фото, чтобы увеличить.
 						</p>
 					</div>
-					<div class="grid gap-4 md:grid-cols-3">
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/cozy_study_room.png`} alt="Уютный зал для занятий в школе Русский Ритм" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+					<div class="grid gap-4 md:grid-cols-3" id="gallery-grid">
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/cozy_study_room.png`} data-caption="Уютный зал для занятий">
+							<img src={`${import.meta.env.BASE_URL}/cozy_study_room.png`} alt="Уютный зал для занятий в школе Русский Ритм" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">Уютный зал для занятий</figcaption>
 						</figure>
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/dance_hall.png`} alt="Просторный танцпол школы Русский Ритм" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/dance_hall.png`} data-caption="Просторный танцпол">
+							<img src={`${import.meta.env.BASE_URL}/dance_hall.png`} alt="Просторный танцпол школы Русский Ритм" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">Просторный танцпол</figcaption>
 						</figure>
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/group_lesson.jpg`} alt="Групповое занятие в школе Русский Ритм" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/group_lesson.jpg`} data-caption="Групповые занятия">
+							<img src={`${import.meta.env.BASE_URL}/group_lesson.jpg`} alt="Групповое занятие в школе Русский Ритм" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">Групповые занятия</figcaption>
 						</figure>
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/salsa.jpg`} alt="Сальса в школе Русский Ритм" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/salsa.jpg`} data-caption="Сальса — энергия и драйв">
+							<img src={`${import.meta.env.BASE_URL}/salsa.jpg`} alt="Сальса в школе Русский Ритм" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">Сальса — энергия и драйв</figcaption>
 						</figure>
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/party.png`} alt="Танцевальная вечеринка в Русском Ритме" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/party.png`} data-caption="Пятничная вечеринка">
+							<img src={`${import.meta.env.BASE_URL}/party.png`} alt="Танцевальная вечеринка в Русском Ритме" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">Пятничная вечеринка</figcaption>
 						</figure>
-						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
-							<img src={`${import.meta.env.BASE_URL}/10_years.jpg`} alt="Русский Ритм — 6+ лет в Анапе" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity group" data-full={`${import.meta.env.BASE_URL}/10_years.jpg`} data-caption="6+ лет в Анапе">
+							<img src={`${import.meta.env.BASE_URL}/10_years.jpg`} alt="Русский Ритм — 6+ лет в Анапе" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
 							<figcaption class="p-3 text-sm text-base-content/60">6+ лет в Анапе</figcaption>
 						</figure>
 					</div>
@@ -541,3 +541,37 @@ import Layout from "../layouts/Layout.astro";
 
 	</div>
 </Layout>
+
+<script>
+	// Lightbox
+	const lightbox = document.createElement('div');
+	lightbox.id = 'lightbox';
+	lightbox.className = 'fixed inset-0 z-[99] bg-black/95 flex items-center justify-center hidden cursor-pointer';
+	lightbox.innerHTML = '<img id="lightbox-img" class="max-w-full max-h-full object-contain p-4" alt="" /><p id="lightbox-caption" class="absolute bottom-4 left-0 right-0 text-center text-sm text-white/60 font-mono"></p>';
+	document.body.appendChild(lightbox);
+
+	const lbImg = document.getElementById('lightbox-img');
+	const lbCaption = document.getElementById('lightbox-caption');
+
+	document.getElementById('gallery-grid').addEventListener('click', (e) => {
+		const figure = e.target.closest('figure[data-full]');
+		if (!figure) return;
+		lbImg.src = figure.dataset.full;
+		lbImg.alt = figure.querySelector('figcaption')?.textContent || '';
+		lbCaption.textContent = figure.dataset.caption || '';
+		lightbox.classList.remove('hidden');
+		document.body.style.overflow = 'hidden';
+	});
+
+	lightbox.addEventListener('click', () => {
+		lightbox.classList.add('hidden');
+		document.body.style.overflow = '';
+	});
+
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+			lightbox.classList.add('hidden');
+			document.body.style.overflow = '';
+		}
+	});
+</script>
