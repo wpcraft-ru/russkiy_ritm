@@ -252,7 +252,86 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</section>
 
-			<!-- ═══ 7. КОНТАКТЫ И ФОРМА ═══ -->
+			<!-- ═══ 7. ГАЛЕРЕЯ ═══ -->
+			<section id="gallery" class="border-b border-base-content/20 bg-base-100 px-4 py-16 md:px-8 md:py-20">
+				<div class="mx-auto max-w-6xl space-y-8">
+					<div>
+						<p class="font-mono text-xs uppercase tracking-widest text-base-content/50 mb-2">Галерея</p>
+						<h2 class="font-display text-4xl leading-[1.1] md:text-5xl font-bold">[Заголовок галереи]</h2>
+						<p class="mt-3 max-w-2xl text-base-content/70">
+							[ЗАПОЛНИТЬ: описание галереи]
+						</p>
+					</div>
+					<div class="grid gap-4 md:grid-cols-3">
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<!-- Замени src на путь к фото: /имя-файла.jpg -->
+							<!-- Фото класть в public/: docs/prototypes/<slug>/public/ -->
+							<!-- Astro раздаёт public/ как статику, путь от корня -->
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 1]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 2]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 3]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 4]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 5]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+						<figure class="border border-base-content/20 bg-base-200 overflow-hidden">
+							<div class="aspect-[4/3] bg-base-300 flex items-center justify-center">
+								<p class="font-mono text-xs text-base-content/40 tracking-widest uppercase">[ФОТО 6]</p>
+							</div>
+							<figcaption class="p-3 text-sm text-base-content/60">[Подпись к фото]</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- ═══ 8. КАРТА ═══ -->
+			<section id="map" class="border-b border-base-content/20 bg-base-200 px-4 py-16 md:px-8 md:py-20">
+				<div class="mx-auto max-w-6xl space-y-8">
+					<div>
+						<p class="font-mono text-xs uppercase tracking-widest text-base-content/50 mb-2">Где мы находимся</p>
+						<h2 class="font-display text-4xl leading-[1.1] md:text-5xl font-bold">Как добраться</h2>
+						<p class="mt-3 max-w-2xl text-base-content/70">
+							[АДРЕС]. [ОРИЕНТИРЫ].
+						</p>
+					</div>
+					<div class="border border-base-content/20 overflow-hidden bg-base-300" style="height: 400px;">
+						<!-- Замени src на ссылку Яндекс.Карт нужного адреса -->
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?ll=[LON]%2C[LAT]&z=17"
+							width="100%"
+							height="400"
+							frameborder="0"
+							allowfullscreen
+							title="Яндекс.Карта — {{PROJECT_NAME}}"
+							class="block"
+						></iframe>
+					</div>
+				</div>
+			</section>
+
+			<!-- ═══ 9. КОНТАКТЫ И ФОРМА ═══ -->
 			<section id="booking" class="border-b border-base-content/20 bg-base-100 px-4 py-16 md:px-8 md:py-20">
 				<div class="mx-auto max-w-6xl space-y-8">
 					<div>

@@ -49,6 +49,30 @@ npm run build
         └── russkiy-ritm/                # прототип Русский Ритм
             ├── astro.config.mjs
             ├── package.json
+            ├── public/                  # статика (фото, иконки)
+            │   ├── *.jpg / *.png        # фото для галереи
+            │   └── ...
+            └── src/
+                ├── assets/app.css
+                ├── layouts/Layout.astro
+                └── pages/index.astro
+```
+
+## Как добавить фото и карту
+
+### Фото (секция Галерея)
+1. Положи `.jpg` / `.png` в `docs/prototypes/<slug>/public/`
+2. В `src/pages/index.astro` найди секцию `ГАЛЕРЕЯ` (блок #7 в шаблоне)
+3. Замени `<p class="...">[ФОТО N]</p>` на `<img src="/имя-файла.jpg" alt="Описание" class="aspect-[4/3] w-full object-cover" loading="lazy" />`
+4. Заполни `<figcaption>` осмысленной подписью
+
+### Яндекс.Карта (секция Карта)
+1. Найди нужный адрес на [yandex.ru/maps](https://yandex.ru/maps) и скопируй координаты
+2. В `index.astro` найди секцию `КАРТА` (блок #8 в шаблоне)
+3. Замени `[LON]` и `[LAT]` в URL iframe на реальные координаты
+4. Чтобы добавить маркер — допиши `&pt=LON,LAT,pm2rdm` в URL
+5. Заполни адрес и ориентиры в тексте
+            ├── package.json
             └── src/
                 ├── assets/app.css
                 ├── layouts/Layout.astro
